@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB36EBDB292FA8D500387A29 /* PlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB36EBDA292FA8D500387A29 /* PlaylistViewModel.swift */; };
+		CB36EBDD292FA91400387A29 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB36EBDC292FA91400387A29 /* Playlist.swift */; };
 		CB6930ED292D3AC700BB9E2D /* MusicNanoChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6930EC292D3AC700BB9E2D /* MusicNanoChallengeApp.swift */; };
 		CB6930EF292D3AC700BB9E2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6930EE292D3AC700BB9E2D /* ContentView.swift */; };
 		CB6930F1292D3AC800BB9E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6930F0292D3AC800BB9E2D /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB36EBDA292FA8D500387A29 /* PlaylistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewModel.swift; sourceTree = "<group>"; };
+		CB36EBDC292FA91400387A29 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		CB6930E9292D3AC700BB9E2D /* MusicNanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicNanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6930EC292D3AC700BB9E2D /* MusicNanoChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicNanoChallengeApp.swift; sourceTree = "<group>"; };
 		CB6930EE292D3AC700BB9E2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				CB6930EE292D3AC700BB9E2D /* ContentView.swift */,
 				CB6930F0292D3AC800BB9E2D /* Assets.xcassets */,
 				CB6930F2292D3AC800BB9E2D /* Preview Content */,
+				CB36EBDA292FA8D500387A29 /* PlaylistViewModel.swift */,
+				CB36EBDC292FA91400387A29 /* Playlist.swift */,
 			);
 			path = MusicNanoChallenge;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 				CB6930FB292D3BD100BB9E2D /* TabBar.swift in Sources */,
 				CB6930FD292D400F00BB9E2D /* BlurView.swift in Sources */,
 				CB6930FF292D44D000BB9E2D /* Miniplayer.swift in Sources */,
+				CB36EBDD292FA91400387A29 /* Playlist.swift in Sources */,
+				CB36EBDB292FA8D500387A29 /* PlaylistViewModel.swift in Sources */,
 				CB693101292D549000BB9E2D /* Search.swift in Sources */,
 				CB6930EF292D3AC700BB9E2D /* ContentView.swift in Sources */,
 				CB6930ED292D3AC700BB9E2D /* MusicNanoChallengeApp.swift in Sources */,

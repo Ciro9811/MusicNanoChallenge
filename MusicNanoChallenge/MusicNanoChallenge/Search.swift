@@ -13,6 +13,8 @@ struct Search: View {
     
     var columns = Array(repeating: GridItem(.flexible(),spacing: 20), count: 2)
     
+    @StateObject var playlistViewModel = PlaylistsViewModel()
+    
     var body: some View {
         
         ScrollView{
@@ -25,6 +27,7 @@ struct Search: View {
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(.primary)
+                        .padding()
                     
                     Spacer(minLength: 0)
                 }
@@ -35,6 +38,7 @@ struct Search: View {
                         .foregroundColor(.primary)
                     
                     TextField("Search", text: $search)
+                        
                 }
                 .padding(.vertical,10)
                 .padding(.horizontal)
@@ -43,23 +47,85 @@ struct Search: View {
                 
                 //Grid View Of Songs
                 
-                LazyVGrid(columns: columns,spacing: 20){
-                    
-                    ForEach(1...10, id: \.self){index in
-                        
-                        Image("p\(index)")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                        
-                        // two side padding = 30
-                        // spacing = 20
-                        // total = 50
-                            .frame(width: (UIScreen.main.bounds.width - 50) / 2, height: 180)
-                            .cornerRadius(15)
+                ScrollView(.vertical, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(playlistViewModel.playlists) { playlist in
+                            VStack(alignment: .leading) {
+                                playlist.image
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .frame(width: 183, height: 178)
+                                    .background(.gray)
+                                    .cornerRadius(5)
+                                Text(playlist.name)
+                                    .font(.system(size: 16))
+                                Text(playlist.category)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(Color(uiColor: .systemGray))
+                            }
+                        }
                     }
+                    .padding([.leading, .trailing], 18)
                     
+                    HStack(spacing: 8) {
+                        ForEach(playlistViewModel.playlists) { playlist in
+                            VStack(alignment: .leading) {
+                                playlist.image
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .frame(width: 183, height: 178)
+                                    .background(.gray)
+                                    .cornerRadius(5)
+                                Text(playlist.name)
+                                    .font(.system(size: 16))
+                                Text(playlist.category)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(Color(uiColor: .systemGray))
+                            }
+                        }
+                    }
+                    .padding([.leading, .trailing], 18)
+                    
+                    HStack(spacing: 8) {
+                        ForEach(playlistViewModel.playlists) { playlist in
+                            VStack(alignment: .leading) {
+                                playlist.image
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .frame(width: 183, height: 178)
+                                    .background(.gray)
+                                    .cornerRadius(5)
+                                Text(playlist.name)
+                                    .font(.system(size: 16))
+                                Text(playlist.category)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(Color(uiColor: .systemGray))
+                            }
+                        }
+                    }
+                    .padding([.leading, .trailing], 18)
+                    
+                    HStack(spacing: 8) {
+                        ForEach(playlistViewModel.playlists) { playlist in
+                            VStack(alignment: .leading) {
+                                playlist.image
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                                    .frame(width: 183, height: 178)
+                                    .background(.gray)
+                                    .cornerRadius(5)
+                                Text(playlist.name)
+                                    .font(.system(size: 16))
+                                Text(playlist.category)
+                                    .font(.system(size: 16))
+                                    .foregroundColor(Color(uiColor: .systemGray))
+                            }
+                        }
+                    }
+                    .padding([.leading, .trailing], 18)
                 }
-                .padding(.top,10)
+                .offset(x: 0, y: 5)
+                .padding(.bottom, 110)
                     
             }
             .padding()

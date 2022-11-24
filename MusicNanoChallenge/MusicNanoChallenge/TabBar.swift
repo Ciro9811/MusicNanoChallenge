@@ -50,6 +50,7 @@ struct TabBar: View {
                     }
                 
                Search()
+                   
                     .tag(2)
                     .tabItem {
                         
